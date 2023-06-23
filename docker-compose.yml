@@ -1,0 +1,14 @@
+version: '3.8'
+services:
+  antmedia:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - '5080:5080'
+      - '1935:1935'
+      - '5443:5443'
+    volumes:
+      - antmedia-data:/usr/local/antmedia/
+volumes:
+  antmedia-data:
